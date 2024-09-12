@@ -429,7 +429,7 @@ Tots els dispositius que fem servir de forma quotidiana són sistemes paral·lel
 ## Què tenen en comú aquests progressos tecnològics?
 
 ::: center
-> !![Diagrama sobre els dispositius actuals.](../../figs/teoria/unitat0/iot-context.jpg){width=60%}
+> ![Diagrama sobre els dispositius actuals.](../../figs/teoria/unitat0/iot-context.jpg){width=60%}
 > Una **interfície** (*Sistema Operatiu*) capaç **d'integrar una gran diversitat de maquinari i programari** i **comunicar-se a través de la xarxa**.
 :::
 
