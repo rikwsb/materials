@@ -1,0 +1,50 @@
+\documentclass[tikz, border=2mm]{standalone}
+
+\usetikzlibrary{positioning,shapes,arrows.meta,backgrounds,external,fit,calc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+
+\definecolor{panatone}{RGB}{137,12,88}
+
+
+\begin{document}
+
+\tikzset{
+every edge/.style = {draw=panatone!20, line width=2mm, shorten >=1pt, shorten <=1pt,},
+every arrow/.style = {draw=panatone!20, line width=2mm, shorten >=1pt, shorten <=1pt,
+                     -{Triangle[scale=0.6]}},                    
+N/.style args = {#1/#2}{fill=#1, text width=#2, 
+                        font=\scriptsize, align=center},
+   N/.default = panatone!30/7em,
+}
+
+\newcommand\tn[1]{\textbf{\small #1}}
+
+\begin{tikzpicture}[font={\sffamily\scriptsize}]
+
+\node (n1) [N]  {\tn{Usuaris}\\ 
+                 serveis, apps}; 
+\node (os) [N=cyan/8em, right=of n1] 
+                {\tn{Sistema Operatiu}};
+                
+\node (n3) [N, right=of os] 
+                {\tn{Maquinàri}\\
+                {discos,xarxa,teclat,...}};
+\node (n4) [N=cyan/8em, below=of n1] 
+                {\tn{Interficie} \\
+                Màquina virtual};
+\node (n5) [N=cyan/8em, below=of n3] 
+                {\tn{Interficie} \\
+                Màquina fisica};
+
+\draw   (n1) edge (os)
+        (n3) edge (os)
+        
+        (n4) edge (n1)
+        (n5) edge (n3)
+;
+
+\end{tikzpicture}
+\end{document}

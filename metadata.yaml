@@ -1,0 +1,19 @@
+---
+### Informació sobre el curs
+grau: "Grau en Enginyeria Informàtica (GEI) <https://grauinformatica.udl.cat/>"
+grauNom: "Grau en Enginyeria Informàtica (GEI)"
+grauUrl: "https://grauinformatica.udl.cat/"
+assignatura: "Sistemes Operatius"
+curs: "2024-2025 (1er Semestre)"
+author: "Jordi Mateo <jordi.mateo@udl.cat>"
+institute: "Escola Politècnica Superior (EPS) <https://www.eps.udl.cat/> · Departament d'Enginyeria Informàtica i Disseny Digital <https://deidd.udl.cat/> "
+pdfauthor: "Jordi Mateo"
+universitat: "Universitat de Lleida (UdL) <https://www.udl.cat/>"
+### Idioma i configuracións especials
+lang: "ca"
+bibliography: "bibliografia.bib"
+link-citations: true
+### Informació sobre la publicació
+copyright: "(c Jordi Mateo)"
+license: "MIT"
+---

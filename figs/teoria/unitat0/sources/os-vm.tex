@@ -1,0 +1,71 @@
+
+\documentclass[tikz, border=2mm]{standalone}
+
+\usetikzlibrary{positioning,shapes,arrows.meta,backgrounds,external,fit,calc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usetikzlibrary{calc,
+arrows,decorations.pathmorphing,
+backgrounds,fit,positioning,shapes.symbols,chains}
+
+\usetikzlibrary{decorations.pathreplacing}
+
+
+\definecolor{panatone}{RGB}{137,12,88}
+
+
+\begin{document}
+
+\tikzset{
+every edge/.style = {draw=panatone!20, line width=2mm, shorten >=1pt, shorten <=1pt,},
+every arrow/.style = {draw=panatone!20, line width=2mm, shorten >=1pt, shorten <=1pt,
+                     -{Triangle[scale=0.6]}},                    
+N/.style args = {#1/#2}{fill=#1, text width=#2, 
+                        font=\scriptsize, align=center},
+   N/.default = panatone!30/7em,
+}
+
+\tikzstyle{block} = [rectangle, draw, fill=panatone!30,
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw=panatone!20, line width=2mm]
+
+
+\newcommand\tn[1]{\textbf{\small #1}}
+
+    \begin{tikzpicture}[node distance =4cm, auto,
+    comment/.style={
+    rectangle, 
+    inner sep= 5pt, 
+    text width=4cm, }]
+    
+        % Place nodes
+        \node [block] (usuari) {Usuari \\ Aplicacions};
+      
+        
+        \node [block, below of=usuari] (so1) {Eines Sistema \\ Llibreries};
+        \node [block, left of=so1] (so3) {Intèrpret \\ de comandes};
+        \node [block, right of=so1] (so2) {Kernel};
+
+        \node [block, below of=so1] (hw) {Maquinari};
+    
+        \draw [line] (so3) -- (usuari);
+        \draw [line] (so2) -- (hw);
+        \draw [line] (usuari) -- (so3);
+        \draw [line] (hw) -- (so2);
+
+         
+      
+      \draw [line] (so1) -- (so2);
+      \draw [line] (so2) -- (so1);
+      \draw [line] (so1) -- (so3);
+      \draw [line] (so3) -- (so1);
+      
+      \draw [draw=panatone!20, decorate,decoration={brace,amplitude=10pt,raise=3mm, mirror}]
+    (so3.275) -- (so2.260) node [black,midway,yshift=-12mm] 
+    {\large   Sistema Operatiu };
+
+\end{tikzpicture}
+\end{document}
+

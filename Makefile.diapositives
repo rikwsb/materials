@@ -1,0 +1,53 @@
+DATADIR       = ..
+RESDIR        = ".:figs:$(DATADIR)"
+INSTALL_FOLDER = ./diapositives
+MD ?= ./md/diapositives
+LANGUAGE ?= ca
+
+WORKDIR       ?= $(CURDIR)
+PANDOC        ?= docker run --rm -i -v $(WORKDIR):/app latex-dev pandoc
+
+SRC           = $(patsubst $(MD)/%.md,%,$(wildcard $(MD)/*.md))
+ID            = SO
+
+GENERATE_NOTES	       ?= no
+PANDOCOPTIONS       = --data-dir=$(DATADIR) --resource-path=$(RESDIR) 
+SLIDEOPTIONS        = $(PANDOCOPTIONS) --defaults=slides.yaml 
+NOTESOPTIONS        = $(PANDOCOPTIONS) --defaults=slides_notes.yaml
+
+.PHONY: all build install clean help
+
+help:
+	@echo "make all - Build and install"
+	@echo "make build - Build slides"
+	@echo "make install - Install slides"
+	@echo "make clean - Clean slides"
+
+all: build install
+
+build: $(SRC) 
+
+ifeq ($(GENERATE_NOTES),yes)
+$(SRC): %: $(ID)_%.pdf $(ID)_%.notes.pdf
+else
+$(SRC): %: $(ID)_%.pdf
+endif
+
+SLIDES        = $(SRC:%=$(ID)_%.pdf)
+NOTES		  = $(SRC:%=$(ID)_%.notes.pdf)
+
+$(ID)_%.pdf: $(MD)/%.md
+	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<
+
+ifeq ($(GENERATE_NOTES),yes)
+$(ID)_%.notes.pdf: $(MD)/%.md
+	$(PANDOC) $(NOTESOPTIONS) -o $@ $< 
+endif
+
+install:
+	mv $(SLIDES) $(INSTALL_FOLDER)
+
+clean:
+	rm -f $(SLIDES)
+	rm -f $(NOTES)
+	
