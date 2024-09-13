@@ -80,8 +80,10 @@ materials
         └── …
 ├──Makefile
 |──Makefile.diapositives
+|──Makefile.apunts
 ├──Metadata.yaml
 ├──bibliografia.bib
+├──.markdownlint.json
 └──LICENSE
 ```
 

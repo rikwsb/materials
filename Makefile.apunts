@@ -1,0 +1,44 @@
+DATADIR       = ..
+RESDIR        = ".:figs:$(DATADIR)"
+INSTALL_FOLDER = ./apunts
+MD ?= ./md/apunts
+LANGUAGE ?= ca
+
+WORKDIR       ?= $(CURDIR)
+PANDOC       ?= docker run --rm -i -v $(WORKDIR):/app latex-dev pandoc
+
+SRC           = $(patsubst $(MD)/%.md,%,$(wildcard $(MD)/*.md))
+ID            = SO
+
+## Options
+PANDOCOPTIONS       = --data-dir=$(DATADIR) --resource-path=$(RESDIR) 
+APUNTSOPTIOINS      = $(PANDOCOPTIONS) -V geometry:a4paper -V geometry:margin=1.8cm -V  --pdf-engine=xelatex
+
+.PHONY: all build install clean help
+
+help:
+	@echo "make all - Build and install"
+	@echo "make build - Build apunts"
+	@echo "make install - Install apunts"
+	@echo "make clean - Clean apunts"
+
+## Targets
+
+all: build install
+
+build: $(SRC) 
+$(SRC): %: $(ID)_%.pdf
+
+APUNTS 	      = $(SRC:%=$(ID)_%.pdf)
+
+$(ID)_%.pdf: $(MD)/%.md
+	$(PANDOC) $(APUNTSOPTIOINS) -o $@ $<
+
+
+install:
+	mv $(APUNTS) $(INSTALL_FOLDER)
+
+clean:
+	rm -f $(APUNTS) $(HTML)
+
+

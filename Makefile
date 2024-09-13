@@ -16,5 +16,5 @@ diapositives:
 apunts:
 	@echo "Creant els apunts..."
 	WORKDIR="$(WORKDIR)" ;\
-	$(MAKE) -C $$WORKDIR -f Makefile.apunts
+	$(MAKE) -C $$WORKDIR -f Makefile.apunts all
 	@echo "Apunts creats."

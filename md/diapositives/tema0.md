@@ -113,25 +113,27 @@ Els estudiants aprendreu a desenvolupar programari a nivell de sistema en el lle
 
 ## Metodologia
 
+\onslide<1->
+
 :::center
 Basada en \blueArrow Aprenentatge **SIGNIFICATIU**, **GUIAT** i **ACTIU**.
 :::
 
-\onslide<1->
+\onslide<2->
 
 - **Sessions teòriques**: S’introdueixen continguts teòrics de l’assignatura i als estudiants, i també s’hi discuteixen les implicacions pràctiques.
   - Diapositives (pdf i html).
   - Vídeos (youtube).
 
-\onslide<2->
+\onslide<3->
 
 - **Sessions pràctiques**: sessions autoguiades de laboratori, sessions de *live coding* o resolució de problemes.
 
-\onslide<3->
+\onslide<4->
 
 - **Treball autònom**:  els estudiants  han d'aplicar els coneixements adquirits a les sessions teòriques i pràctiques per acabar els problemes, laboratoris i projectes proposats. A més, han de realitzar les lectures dels apunts i consultar la bibliografia recomanada.
 
-\onslide<4->
+\onslide<5->
 :::center
 Les sessions teòriques i pràctiques estan combinades en les sessions de 3h de durada.
 :::
@@ -163,12 +165,16 @@ Les sessions teòriques i pràctiques estan combinades en les sessions de 3h de 
 ::: columns
 ::: {.column width="45%"}
 
+\onslide<1->
+
 - **Objectiu**: Fomentar la reflexió i l'autoavaluació dels continguts treballats a classe.
 - **Metodologia**: Cada setmana, els estudiants han de fer un commit al seu repositori d'apunts amb les notes de les sessions de teoria i pràctiques.
 - **Avaluació**: Es valorarà la qualitat de les notes, la seva coherència i la seva relació amb els continguts treballats, així com les reflexions i opinions personals incloses.
 
 :::
 ::: {.column width="45%"}
+
+\onslide<2->
 
 ### Exemple de Notes
 
@@ -189,7 +195,11 @@ Les sessions teòriques i pràctiques estan combinades en les sessions de 3h de 
 
 ## Extra: Correcció, Detecció i Millora dels Materials
 
+\onslide<1->
+
 Els materials de l'assignatura segueixen la metodologia de *Open Source*. Això vol dir que qualsevol estudiant pot detectar errors, millorar els materials o afegir continguts nous. Per tant, cada estudiant pot fer *fork* del repositori de l'assignatura i fer *pull request* amb les seves correccions i millores.
+
+\onslide<2->
 
 \smartdiagram[flow diagram:horizontal]{
   \textbf{↓} Pull \texttt{(git pull)},
@@ -199,36 +209,33 @@ Els materials de l'assignatura segueixen la metodologia de *Open Source*. Això 
   Pull Request
 }
 
+\onslide<3->
+
 - **Branca Main**: Reservada per estar sincronitzada amb els materials oficials.
 - **Branques de treball**: Cada estudiant pot crear una branca per fer canvis i millorar els materials.
+
+\onslide<4->
 
 S'avaluarà la quantitat i qualitat de les correccions, deteccions i millores realitzades en els materials de l'assignatura.
 
 ## Normativa del curs (I) - *Assistència i Seguiment*
 
-- L'**assistència a les sessions de teoria i pràctiques** és **obligatòria** però altament *recomanable*.
-
-- **Seguiment i Participació**: Es valorarà la participació activa a les sessions de teoria i pràctiques, així com la realització i entrega dels exercicis i problemes proposats.
-
-- Els projectes pràctics no són obligatoris, i es poden realitzar en grup de fins a 3 persones.
-
-- Es demana que els estudiants arribin puntuals a les sessions. L'entrada tardana pot interrompre la dinàmica de la classe i el treball dels companys.
+> - L'**assistència a les sessions de teoria i pràctiques** és **obligatòria** però altament *recomanable*.
+> - **Seguiment i Participació**: Es valorarà la participació activa a les sessions de teoria i pràctiques, així com la realització i entrega dels exercicis i problemes proposats.
+> - Els projectes pràctics no són obligatoris, i es poden realitzar en grup de fins a 3 persones.
+> - Es demana que els estudiants arribin puntuals a les sessions. L'entrada tardana pot interrompre la dinàmica de la classe i el treball dels companys.
 
 ## Normativa del curs (II) - *Gestió dels grups*
 
-- Cada estudiant és responsable de la seva pròpia feina i de com gestiona el seu temps. L'assistència a classe no és obligatòria, però és altament recomanable per garantir el seguiment adequat de l'assignatura.
-
-- Durant les sessions de laboratori, es fomenta el treball en grup, sempre de manera ordenada i respectuosa envers els companys.
-
-- Cada alumne ha de presentar evidències pròpies del treball realitzat, encara que es col·labori en grup.
+> - Cada estudiant és responsable de la seva pròpia feina i de com gestiona el seu temps. L'assistència a classe no és obligatòria, però és altament recomanable per garantir el seguiment adequat de l'assignatura.
+> - Durant les sessions de laboratori, es fomenta el treball en grup, sempre de manera ordenada i respectuosa envers els companys.
+> - Cada alumne ha de presentar evidències pròpies del treball realitzat, encara que es col·labori en grup.
 
 ## Normativa del curs (III) - *Exàmens i Avaluació*
 
-- Els exàmens són escrits i no està permès l'ús d'ordinadors.
-
-- Els parcials avaluaran els coneixements teòrics i pràctics de l'assignatura.
-
-- L'ús d'eines d'intel·ligència artificial està permès durant el curs, sempre que no es limiti a un simple copiar i enganxar. Heu de justificar les vostres respostes amb reflexions i opinions personals.
+> - Els exàmens són escrits i no està permès l'ús d'ordinadors. Es permetrà una fulla manuscrita mida A4 amb apunts, notes, etc.
+> - Els parcials avaluaran els coneixements teòrics i pràctics de l'assignatura.
+> - L'ús d'eines d'intel·ligència artificial està permès durant el curs, sempre que no es limiti a un simple copiar i enganxar. Heu de justificar les vostres respostes amb reflexions i opinions personals.
 
 ## Eines necessàries
 
@@ -429,8 +436,11 @@ Tots els dispositius que fem servir de forma quotidiana són sistemes paral·lel
 ## Què tenen en comú aquests progressos tecnològics?
 
 ::: center
-> ![Diagrama sobre els dispositius actuals.](../../figs/teoria/unitat0/iot-context.jpg){width=60%}
-> Una **interfície** (*Sistema Operatiu*) capaç **d'integrar una gran diversitat de maquinari i programari** i **comunicar-se a través de la xarxa**.
+
+![Diagrama sobre els dispositius actuals.](../../figs/teoria/unitat0/iot-context.jpg){width=60%}
+
+Una **interfície** (*Sistema Operatiu*) capaç **d'integrar una gran diversitat de maquinari i programari** i **comunicar-se a través de la xarxa**.
+
 :::
 
 ::: notes
