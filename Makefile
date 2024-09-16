@@ -1,6 +1,6 @@
 WORKDIR = $(shell pwd)
 
-.PHONY: help diapositives apunts
+.PHONY: help diapositives apunts diapositives-annotacions
 
 help:
 	@echo "make help - Show this help"
@@ -12,6 +12,12 @@ diapositives:
 	WORKDIR="$(WORKDIR)" ;\
 	$(MAKE) -C $$WORKDIR -f Makefile.diapositives all
 	@echo "Diapositives creades i guardades a diapositives."
+
+diapositives-annotacions:
+	@echo "Creant les diapositives amb les anotacions..."
+	WORKDIR="$(WORKDIR)" ;\
+	$(MAKE) -C $$WORKDIR -f Makefile.diapositives all GENERATE_NOTES=yes
+	@echo "Diapositives amb notes d'orador."
 
 apunts:
 	@echo "Creant els apunts..."

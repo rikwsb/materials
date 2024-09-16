@@ -3,9 +3,10 @@ RESDIR        = ".:figs:$(DATADIR)"
 INSTALL_FOLDER = ./diapositives
 MD ?= ./md/diapositives
 LANGUAGE ?= ca
+DOCKER-IMAGE  ?= latex-dev
 
 WORKDIR       ?= $(CURDIR)
-PANDOC        ?= docker run --rm -i -v $(WORKDIR):/app latex-dev pandoc
+PANDOC        ?= docker run --rm -i -v $(WORKDIR):/app $(DOCKER-IMAGE) pandoc
 
 SRC           = $(patsubst $(MD)/%.md,%,$(wildcard $(MD)/*.md))
 ID            = SO
@@ -46,6 +47,7 @@ endif
 
 install:
 	mv $(SLIDES) $(INSTALL_FOLDER)
+	mv $(NOTES) $(INSTALL_FOLDER)
 
 clean:
 	rm -f $(SLIDES)

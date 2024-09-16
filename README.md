@@ -40,17 +40,17 @@ Per compilar els materials, seguiu aquests passos:
 
 1. Cloneu el repositori:
 
-```bash
-git clone
-```
+    ```bash
+    git clone
+    ```
 
 2. Utilitzeu el `Makefile` per compilar els materials:
 
 - Si voleu generar les diapositives:
 
-```bash
-make diapositives
-```
+    ```bash
+    make diapositives
+    ```
 
 ## Ús
 

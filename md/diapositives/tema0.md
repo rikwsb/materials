@@ -304,30 +304,15 @@ S'avaluarà la quantitat i qualitat de les correccions, deteccions i millores re
 
 ## Bones pràctiques
 
-\onslide<1->
-
-> \hfill Les habilitats desitjables dels desenvolupadors:
->
-> \hfill Capacitat per ignorar noves eines i tecnologies.
->
-> \hfill Simplicitat.
->
-> \hfill Habilitats en l'eliminació de codi.
->
-> \hfill Humilitat.
->
-> \hfill -- David Winterbottom
-
-\onslide<2->
-
-> 1. DRY (Do not repeat yourself).
-> 2. Fes codi fàcil de reutilitzar.
-> 3. Testeja aviat, testeja sovint, testeja de forma automàtica.
-> 4. No assumeixis res, prova-ho.
-> 5. Utilitza assertions per prevenir l'impossible.
-> 6. Utilitza excepcions per problemes excepcionals.
-> 7. Estima l'ordre de complexitat dels teus algorismes.
-> 8. Utilitza patrons de disseny.
+> - DRY (Do not repeat yourself).
+> - Codi fàcil de reutilitzar.
+> - Testeja aviat, testeja sovint, testeja de forma automàtica.
+> - No assumeixis res, prova-ho.
+> - Utilitza assertions per prevenir l'impossible.
+> - Utilitza excepcions per problemes excepcionals.
+> - Estima l'ordre de complexitat dels teus algorismes.
+> - Utilitza patrons de disseny.
+> - Utilitza eines de control de versions.
 
 ## Bibliografia recomanada (per la vida... no pel curs)
 
@@ -393,8 +378,6 @@ S'avaluarà la quantitat i qualitat de les correccions, deteccions i millores re
 Avui en dia tothom parla de **IoT**, **BigData**, **Cloud**, **AI**, **Blockchain**, **Metavers**
 :::
 
-\onslide<2->
-
 ::: columns
 ::: {.column width="45%"}
 
@@ -413,7 +396,7 @@ Avui en dia tothom parla de **IoT**, **BigData**, **Cloud**, **AI**, **Blockchai
 :::
 :::
 
-\onslide<7->
+\onslide<6->
 
 ::: center
 La barrera que separa el món físic i el món virtual cada cop es mes estreta.
@@ -553,10 +536,21 @@ Moltes vegades...!
 
 ### Imagineu que sou un sistema informàtic i us envien l'ordre de llegir un fitxer? Quins és el procediment per fer aquesta acció?
 
-> 1. Engegar motor del disc.
-> 2. Buscar posició al disc a llegir (pista, cara, sector).
-> 3. Llegir.
-> 4. Apagar el motor
+\onslide<3->
+
+- Engegar motor del disc.
+  
+\onslide<4->  
+
+- Buscar posició al disc a llegir (pista, cara, sector).
+
+\onslide<5->
+
+- Llegir.
+
+\onslide<6->  
+
+- Apagar el motor.
 
 ::: notes
 Cada usuari de forma activa (llegir un document) o passiva (el vostre sistema operatiu llegeix molts fitxers únicament per arrancar...).
@@ -574,12 +568,26 @@ Per fer-ho el sistema opartiu té que indicar al disc que engegi el seu motor, e
 Cada peça de hardware és diferent \blueArrow La complexitat per gestionar els recursos és molt elevada.
 :::
 
-> - Arquitectures diferents de processadors i també de generacions (x86,ARM, RISC-V,MIPS, PowerPC,...).
-> - Diferents tipus de memòries (RAM DDR3, DDR4, DDR5, NAND,... ).
-> - Diferents tipus de discs (HDD o SSD).
-> - Diferents dispositius entrada/sortida.
-> - Diferents entorns de xarxa.
+\onslide<2->
+
+- Arquitectures diferents de processadors i també de generacions (x86,ARM, RISC-V,MIPS, PowerPC,...).
+
+\onslide<3->
+
+- Diferents tipus de memòries (RAM DDR3, DDR4, DDR5, NAND,... ).
   
+\onslide<4->
+
+- Diferents tipus de discs (HDD o SSD).
+  
+\onslide<5->
+
+- Diferents dispositius entrada/sortida.
+  
+\onslide<6->
+
+- Diferents entorns de xarxa.
+
 \onslide<7->
 
 :::center
@@ -612,18 +620,33 @@ Què pot passar si un programa pot accedir a tota la RAM?
 
 ### Tots els programes necessiten accedir a tot el hardware?
 
+\onslide<2->
+
 Per suposat que no! Això podria causar problemes de seguretat com:
 
+\onslide<3->
+
 - **Pèrdua de confidencialitat**: Accés no autoritzat a dades sensibles.
+
+\onslide<4->
+
 - **Accés a informació restringida**: Usuaris no autoritzats podrien veure dades privades.
+
+\onslide<5->
+
 - **Denegació de serveis**: Un programa podria bloquejar l'accés a recursos per a altres programes.
 
-\onslide<2->
+\onslide<6->
 
 ### Què pot passar si un programa pot accedir a tota la RAM?
 
-1. Un programa de l'usuari Jordi amb accés a tota la RAM podria veure les dades del programa de l'usuari Pere.
-2. Si el programa falla, podria afectar tot el sistema i requerir un reinici.
+\onslide<7->
+
+- Un programa de l'usuari Jordi amb accés a tota la RAM podria veure les dades del programa de l'usuari Pere.
+
+\onslide<8->
+
+- Si el programa falla, podria afectar tot el sistema i requerir un reinici.
 
 :::notes
 No, clar que no!
@@ -708,13 +731,30 @@ Podem dir que el SO és el cervell del sistema informàtic,ja que controla tots 
 ::: columns
 ::: {.column width="35%"}
 
-> - Una plataforma per executar aplicacions.
-> - Una plataforma transparent per evitar la complexitat del hardware.
-> - Una plataforma eficient per utilitzar els recursos de forma òptima.
-> - Una plataforma portable per utilitzar-ho indepedentment del hardware.
+\onslide<2->
+
+### Una plataforma
+
+\onslide<3->
+
+- Una plataforma per executar aplicacions.
+
+\onslide<4->
+
+- Una plataforma transparent per evitar la complexitat del hardware.
+
+\onslide<5->
+
+- Una plataforma eficient per utilitzar els recursos de forma òptima.
+
+\onslide<6->
+
+- Una plataforma portable per utilitzar-ho indepedentment del hardware.
 
 :::
 ::: {.column width="60%"}
+
+\onslide<2->
 
 ![Esquema d'elements i funcions d'un SO.](../../figs/teoria/unitat0/esquema1.png){width="70%"}
 
@@ -726,14 +766,20 @@ Podem dir que el SO és el cervell del sistema informàtic,ja que controla tots 
 ::: columns
 ::: {.column width="35%"}
 
+### Serveis
+
 > - Controlar usuaris i aplicacions.
 > - Gestionar usuaris i aplicacions.
 > - Gestionar la Memòria.
 > - Sistema de fitxers.
 > - Planificadors.
 > - Eines de xarxa.
+
+### Garanties
+
+> - Seguretat.
 > - Transparència.
-> - Eficiència .
+> - Eficiència.
 > - Portabilitat.
 > - Estabilitat al llarg del temps.
 
@@ -872,6 +918,15 @@ Execució de  múltiples sistemes operatius en una única màquina física. Per 
 ![Esquema de tipus de virtualització de màquines virtuals](../../figs/teoria/unitat0/virtualitzacio.png){width=90mm}
 :::
 
+::: notes
+
+- **Virtualització Nativa**: Hipervisor s'executa directament sobre el maquinari físic sense cap sistema operatiu intermedi. Exemples d'aquesta tecnologia inclouen VMware ESXi o Microsoft Hyper-V. Això ofereix un rendiment molt elevat, ja que no hi ha cap capa addicional entre el maquinari i l'hipervisor, ideal per a entorns de producció.
+- **Virtualització Allotjada**: Hipervisor s'executa sobre un sistema operatiu ja existent. Per exemple, en KVM, s'utilitza Linux com a sistema operatiu base, i sobre aquest es creen les màquines virtuals.
+- **Paravirtualització**: El sistema operatiu convidat sap que està sent virtualitzat i coopera amb l'hipervisor per millorar el rendiment. Un exemple destacat és Xen, que és molt utilitzat en entorns cloud per la seva eficiència.
+- **Virtualització Assistida per Hardware**: Aquest model aprofita les capacitats del processador per accelerar el procés de virtualització. Processadors moderns com els d'Intel (VT-x) o AMD (AMD-V) ofereixen suport per a aquest tipus de virtualització (VMware o Hyper-V).
+
+:::
+
 ## Quins són els rols del sistema operatiu? (V)
 
 \onslide<1->
@@ -960,8 +1015,7 @@ H
 :::
 
 ::: notes
-Ara analitzem com el sistema operatiu permet l'execució d'aquest programes i que passa internament.
-En primer lloc, el programa c s'ha de compilar amb un compilador i enllaçar amb les llibreries del sistema que ens proporciona el sistema operatiu. (La setmana vinent veurem els detalls concrets d'aquesta operació). Un cop tenim un executable, en aquest cap anomenta prog, si l'executem el sistema operatiu crearà una estructura anomenada procés on es guardarà un identificador, un espai de memòria,... aquesta estructura és una de les abstraccions essencials per la funció d'il·lusionisme. Fixeu-vos que el mateix programa pot ser executat dos cops i el sistema operatiu generarà 2 processos diferents. Amb identificadors diferents i espai de memoria diferent. Per tant, el sistema operatiu utilitzant el planificador assignarà el processador (assumimim que només tenim 1 core) a 1 procés durant un temps determinat i anirà intercanviant (canvi de context) aquest procés cada X temps, d'aquesta manera cada procés creu tenir tots els recursos per ells (il·lusió). Per fer-ho, el sistema operatiu guardà una foto de l'estat actual del procés a memòria i la recuperarà més endavant quan li torni a donar dret d'execució. Noteu també que s'ha creat en mèmoria una subregió independent per cada procés. Quan un procés intenta accedir una zona de memòria forà de la seva subregió o inexistent es dona el famós SEGMENTATION FAULT. Com en l'últim exemple on el procés intenta accedir a una zona de memòria que no li pertany. Això és una de les funcions de protecció que ens ofereix el sistema operatiu. Al llarg del curs veurem amb més detall com funcionen tots aquests mecanismes. Depenen de la prioritat dels procesesos  A o B poden tenir més temps de CPU que l'altre i sortir els missatges de forma desordenada.
+
 :::
 
 ## Anàlisi: Què fa aquest programa? (II)
@@ -970,10 +1024,22 @@ En primer lloc, el programa c s'ha de compilar amb un compilador i enllaçar amb
 ![Esquema sobre l'execució del programa](../../figs/teoria/unitat0/prog_A_B_Memory.png){width=140mm}
 :::
 
+::: notes
+En primer lloc, el programa c s'ha de compilar amb un compilador i enllaçar amb les llibreries del sistema que ens proporciona el sistema operatiu.
+
+Un cop tenim un executable, si l'executem el sistema operatiu crearà una estructura anomenada procés on es guardarà un identificador, un espai de memòria,... aquesta estructura és una de les abstraccions essencials per la funció d'il·lusionisme.
+
+Fixeu-vos que el mateix programa pot ser executat dos cops i el sistema operatiu generarà 2 processos diferents. Amb identificadors diferents i espai de memoria diferent.
+:::
+
 ## Anàlisi: Què fa aquest programa? (III)
 
 :::center
 ![Esquema sobre l'execució del programa](../../figs/teoria/unitat0/prog_A_executing.png){width=140mm}
+:::
+
+::: notes
+Per tant, el sistema operatiu utilitzant el planificador assignarà el processador (assumimim que només tenim 1 core) a 1 procés durant un temps determinat i anirà intercanviant (canvi de context) aquest procés cada X temps, d'aquesta manera cada procés creu tenir tots els recursos per ells (il·lusió).
 :::
 
 ## Anàlisi: Què fa aquest programa? (IV)
@@ -982,12 +1048,18 @@ En primer lloc, el programa c s'ha de compilar amb un compilador i enllaçar amb
 ![Esquema sobre l'execució del programa](../../figs/teoria/unitat0/prog_B_executing.png){width=140mm}
 :::
 
+::: notes
+Per fer-ho, el sistema operatiu guardà una foto de l'estat actual del procés a memòria i la recuperarà més endavant quan li torni a donar dret d'execució.
+
+Noteu també que s'ha creat en mèmoria una subregió independent per cada procés. Quan un procés intenta accedir una zona de memòria forà de la seva subregió o inexistent es dona el famós SEGMENTATION FAULT.
+
+Com en l'últim exemple on el procés intenta accedir a una zona de memòria que no li pertany. Això és una de les funcions de protecció que ens ofereix el sistema operatiu. Al llarg del curs veurem amb més detall com funcionen tots aquests mecanismes.
+:::
+
 ## Anàlisi: Què fa aquest programa? (V)
 
 ::: columns
 ::: {.column width="45%"}
-
-\onslide<1->
 
 ```c
 #include <stdio.h>
@@ -1073,8 +1145,6 @@ int main(int argc, char *argv[])
 :::
 ::: {.column width="50%"}
 
-\onslide<2->
-
 ### `./prog & ; ./prog O`
 
 ?????
@@ -1105,8 +1175,6 @@ int main(int argc, char *argv[])
 
 :::
 ::: {.column width="50%"}
-
-\onslide<2->
 
 ### ./prog & ; ./prog O
 
@@ -1185,8 +1253,6 @@ int main(int argc, char *argv[])
 :::
 ::: {.column width="45%"}
 
-\onslide<2->
-
 ### ./prog1 & ./prog1
 
 ```bash
@@ -1223,8 +1289,6 @@ int main(int argc, char *argv[])
 
 :::
 ::: {.column width="45%"}
-
-\onslide<2->
 
 ::: cbox
 Les **adreçes virtuals** protegeixen els processosos entre ells i permeten que tots dos processos puguin fer servir la mateixa adreça sense afectar-se.
