@@ -15,7 +15,6 @@
 - Introducció
 - Requisits
 - Instal·lació
-- Ús
 - Estructura del Repositori
 - Contribuir
 - Llicència
@@ -52,9 +51,11 @@ Per compilar els materials, seguiu aquests passos:
     make diapositives
     ```
 
-## Ús
+- Si voleu generar els apunts:
 
-Podeu trobar els materials compilats a la carpeta `output`. Per visualitzar les diapositives i apunts, obriu els fitxers PDF corresponents.
+    ```bash
+    make apunts
+    ```
 
 ## Estructura del Repositori
 
